@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Feb 23, 2018 at 01:41 AM
+-- Generation Time: Feb 23, 2018 at 03:01 AM
 -- Server version: 5.6.38
 -- PHP Version: 7.2.1
 
@@ -1027,6 +1027,7 @@ CREATE TABLE `tbl_user` (
   `user_pass` varchar(250) NOT NULL,
   `user_email` varchar(250) NOT NULL,
   `user_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `user_level` int(11) NOT NULL,
   `user_ip` varchar(50) NOT NULL DEFAULT 'no'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -1034,8 +1035,10 @@ CREATE TABLE `tbl_user` (
 -- Dumping data for table `tbl_user`
 --
 
-INSERT INTO `tbl_user` (`user_id`, `user_fname`, `user_name`, `user_pass`, `user_email`, `user_date`, `user_ip`) VALUES
-(1, 'Chi Mai', 'chandrav', 'thidien', 'cmaistudio@gmail.com', '2018-02-16 22:13:06', '::1');
+INSERT INTO `tbl_user` (`user_id`, `user_fname`, `user_name`, `user_pass`, `user_email`, `user_date`, `user_level`, `user_ip`) VALUES
+(1, 'Chi Mai', 'chandrav', 'thidien', 'cmaistudio@gmail.com', '2018-02-23 02:59:26', 0, '::1'),
+(2, 'Phuc', 'leohpnguyen', '$2y$10$RKduhYJ927babyOAxYEube7ljdddtJmsV6STkdZK8n3wtTIwJXYQm', 'lephpnguyen@gmail.com', '2018-02-23 02:48:53', 1, 'no'),
+(3, 'El', 'el_ng', '$2y$10$opYhxdWesRbjwYi1D/5goeeOE1PVuU00cFZu4h.dktVO2hmvkVk0m', 'x_elena@yahoo.com', '2018-02-23 02:59:49', 2, 'no');
 
 --
 -- Indexes for dumped tables
@@ -1248,7 +1251,7 @@ ALTER TABLE `tbl_urating`
 -- AUTO_INCREMENT for table `tbl_user`
 --
 ALTER TABLE `tbl_user`
-  MODIFY `user_id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `user_id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

@@ -11,7 +11,7 @@ if($password){
 }
 
 
-$userstring = "INSERT INTO tbl_user (user_id, user_fname, user_name, user_pass, user_email, user_date, user_level, user_ip) VALUES (NULL, '{$fname}', '{$username}', '{$password}', '{$email}', NULL, '{$lvllist}', 'no')";
+$userstring = "INSERT INTO tbl_user VALUES (NULL, '{$fname}', '{$username}', '{$password}', '{$email}', NULL, '{$lvllist}', 'no')";
 $userquery = mysqli_query($link, $userstring);
 
 //echo $userstring;
